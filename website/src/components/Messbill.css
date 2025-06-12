@@ -1,0 +1,32 @@
+.bill{
+background-color: rgb(191, 214, 239);
+	& a{
+margin-left: 2rem;
+	}
+
+	& .messcon{
+		margin-left: 4rem;
+		background-color: blueviolet;
+		border: none;
+		padding: 0.5rem 1rem;
+		font-size: 1.2rem;
+		border-radius: 0.4rem;
+		transition: all 0.3s ease-in-out;
+		&:hover{
+			border: none;
+	color: black;
+		}
+	}
+		& .messcom{
+		background-color: rgb(109, 36, 227);
+		border: none;
+		padding: 0.5rem 1rem;
+		font-size: 1.2rem;
+		border-radius: 0.4rem;
+		transition: all 0.3s ease-in-out;
+		&:hover{
+			border: none;
+			color: black;
+		}
+	}
+}

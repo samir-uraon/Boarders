@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.containers{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+padding: 5rem;
+}
+.card{
+	overflow: hidden;
+	width: 30rem;
+	height: 36rem;
+	background-color: rgb(53, 51, 51);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+border: 0.2rem solid #646cff;
+border-radius: 0.2rem;
+box-shadow: 0 0 1.5rem #646cff;
+position: relative;
+font-size: 125%;
+}
+.main2{
+		width: 35rem;
+	height: 22rem;
+
+}
+.main3{
+		width: auto;
+	height: auto;
+padding: 2rem;
+& .input-div{
+	height: 5.3rem;
+	& i{
+		margin-top: 0.3rem;
+	}
+}
+
+}
+.main{
+	padding: 0 2rem;
+	width: 100%;
+height: 100%;
+display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+row-gap: 1rem;
+}
+.main input{
+width: 100%;
+	border: none;
+	background: transparent;
+	border-bottom: 0.15rem solid #646cff;
+outline: none;
+font-size: 1.6rem;
+padding: 0.1rem 0;
+padding-left: 0.3rem;
+color: aqua;
+
+}
+.main h2{
+text-align: center;
+	font-size: 3.4rem;
+	font-family: monospace;
+}
+.main form{
+	padding: 2rem 2rem;
+position: relative;
+}
+
+.input-div{
+
+	text-align: center;
+height: 5rem;
+& label
+{
+	font-size: 1.5rem;
+	position: absolute;
+	left: 10%;
+transition: 0.5s;
+
+}
+& i{
+	position: absolute;
+	left: 83%;
+margin-top: 0.5rem;
+transition: 0.5s ease-in-out;
+cursor: pointer;
+	font-size: 1.5rem;
+}
+
+
+}
+
+
+.main .input-div input:focus ~ label,
+.main .input-div input:valid ~ label{
+transform: translateY(-100%);
+color: #646cff;
+}
+
+.main .input-div input:focus ~ i,
+.main .input-div input:valid ~ i{
+display: none;
+}
+
+
+ .input-button,.text{
+
+	text-align: center;
+}
+.input-button button{
+	border-radius: 0.5rem;
+	width: 100%;
+padding: 0.2rem 2rem;
+position: relative;
+font-size: 1.5rem;
+top: 1rem;
+}
+#f{
+	position: absolute;
+	top: 51%;
+	left: 50%;
+	color: blueviolet;
+	cursor: pointer;
+	font-size: 1.15rem;
+}
+#f:hover{
+	text-decoration: underline;
+}
+.text{
+	position: relative;
+	top: 2rem;
+	& p{
+		font-size: 1.1rem;
+	}
+}
+
+#gb{
+	font-size: 1.3rem;
+	display: flex;
+font-family: sans-serif;
+	justify-content: center;
+	align-items: center;
+	padding: 0.2rem 0.8rem;
+	border-radius: 0.4rem;
+	column-gap: 0.5rem;
+transition: all 0.3s ease-in-out;
+	border-color: aliceblue;
+	& img{
+		width:2.5rem;
+		height: 2.5rem;
+	}
+	&:hover{
+		background-color: azure;
+		color: black;
+	}
+}
+
+
+
+
+ 

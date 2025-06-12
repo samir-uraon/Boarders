@@ -1,0 +1,32 @@
+
+
+*{
+	margin: 0;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+
+
+	.goback{
+		padding: 2rem;
+		& button{
+			padding: 0.5rem 1.1rem;
+			font-size: 1.2rem;
+			background-color: blueviolet;
+			transition: 0.3s linear;
+			border: none;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			border-radius: 0.5rem;
+			&:hover{
+				background-color: aliceblue;
+				color: black;
+			}
+		}
+	}
+
+
+
+
+
+

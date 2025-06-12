@@ -1,0 +1,13 @@
+
+@media (max-width:700px){
+		.ad{
+	height: 92%;}
+}
+@media (max-width:380px){
+		.ad{
+	height: 95%;}
+}
+@media (max-width:300px){
+		.ad{
+	height: 97%;}
+}
