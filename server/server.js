@@ -12,177 +12,7 @@ const requestIp=require("request-ip")
 const {getAccessToken,getRefreshToken,middelware,VerifyAuthantication, VerifyToken,genhashpassword, getAccessToken2, VerifyToken2,comparePassword2, getRefreshToken2}=require("./AuthService.js")
   
 
-const test=[{
-	name:"Samir Kispotta",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Kispotta",
-	dept:"Construction Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-15",
-	home:"Alipurduar"
-},{
-	name:"Samir Oraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Kispotta",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Sonu Uraon",
-	dept:"Printing And Packaging Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Sonu Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},
-{
-	name:"Sonu Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Sonu Uraon",
-	dept:"Construction Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-15",
-	home:"Alipurduar"
-},{
-	name:"Samir Oraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Printing And Packaging Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Kalchini"
-},{
-	name:"Samir Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Construction Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-15",
-	home:"Alipurduar"
-},{
-	name:"Samir Oraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Printing And Packaging Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Uraon",
-	dept:"Construction Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-15",
-	home:"Alipurduar"
-},{
-	name:"Samir Oraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir kispotta",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Samir Kispotta",
-	dept:"Printing And Packaging Engineering",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-},{
-	name:"Sonu Uraon",
-	dept:"Information Technology",
-	year:"1st",
-	profile:"https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-	roomno:"s1-25",
-	home:"Alipurduar"
-}
-]
+
 
 const crypto=require("crypto")
 const app=express()
@@ -191,7 +21,7 @@ app.use(upload())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors(({
-  origin: 'http://127.0.0.1:3000',  // React dev server
+  origin: 'https://boarders.onrender.com',  // React dev server
   credentials: true
 })))
 
@@ -515,7 +345,7 @@ const restoken=getRefreshToken2(sessionid)
  
 res.cookie("Access_Token2",actoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 5 * 60 * 1000 // 5 Minutes
@@ -523,7 +353,7 @@ res.cookie("Access_Token2",actoken, {
 
  res.cookie('Refresh_Token2', restoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge:  60 * 60 * 1000 // 1 hours
@@ -723,7 +553,7 @@ const restoken=getRefreshToken(sessionid)
  
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
@@ -731,7 +561,7 @@ res.cookie("Access_Token",actoken, {
 
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
@@ -855,7 +685,7 @@ app.post("/forgetpassword",async (req,res)=>{
 
 		res.cookie("Reset_token",token,{
 			 httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 60 * 60 * 1000 // 60 Minutes
@@ -1164,7 +994,7 @@ const restoken=getRefreshToken(sessionid)
  
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
@@ -1172,7 +1002,7 @@ res.cookie("Access_Token",actoken, {
 
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
