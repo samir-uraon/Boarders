@@ -18,13 +18,7 @@ const {getAccessToken,getRefreshToken,middelware,VerifyAuthantication, VerifyTok
 const crypto=require("crypto")
 const app=express()
 
-const RedisStore = require('connect-redis')(session); // No .default!
-const redis = require('redis');
-const redisClient = redis.createClient();
-
-redisClient.on('error', (err) => {
-		console.error('Redis error:', err);
-	});
+ 
 
 const {mailit,emailvemailsend,mailit22,mes22,mailit21,profilevemsend,forgetpasswordemail, forgetpasswordemailforadmin}=require("./mailtransfer")
 app.use(upload())
@@ -36,7 +30,7 @@ app.use(cors(({
 })))
 
 app.use(session({
-	 store: new RedisStore({ client: redisClient }),
+ 
 	secret:process.env.session_secret,
 	resave:false,
 	 saveUninitialized: false,
@@ -355,10 +349,10 @@ const actoken=getAccessToken2({
 
 const restoken=getRefreshToken2(sessionid)
  
-res.cookie("Access_Token2",actoken, {
+res.cookie("Access_Token2",actoken, { 
     httpOnly: true,
     secure: false, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge: 5 * 60 * 1000 // 5 Minutes
   })
@@ -366,7 +360,7 @@ res.cookie("Access_Token2",actoken, {
  res.cookie('Refresh_Token2', restoken, {
     httpOnly: true,
     secure: false, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge:  60 * 60 * 1000 // 1 hours
   });
@@ -566,7 +560,7 @@ const restoken=getRefreshToken(sessionid)
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
     secure: false, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
@@ -574,7 +568,7 @@ res.cookie("Access_Token",actoken, {
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
     secure: false, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
@@ -698,7 +692,7 @@ app.post("/forgetpassword",async (req,res)=>{
 		res.cookie("Reset_token",token,{
 			 httpOnly: true,
     secure: false, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge: 60 * 60 * 1000 // 60 Minutes
 		})
@@ -1007,7 +1001,7 @@ const restoken=getRefreshToken(sessionid)
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
@@ -1015,7 +1009,7 @@ res.cookie("Access_Token",actoken, {
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    sameSite: 'Strict',
+    
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
