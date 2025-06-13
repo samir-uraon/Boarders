@@ -319,7 +319,8 @@ else if(accesstoken2){
 			req.session.destroy()
 			res.clearCookie("Access_Token2")
 			res.clearCookie("Refresh_Token2")
-return next()}
+return next()
+}
 }
 
 

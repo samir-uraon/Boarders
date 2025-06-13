@@ -9,24 +9,39 @@ dotenv.config()
 const cookieParser=require("cookie-parser")
 const session=require("express-session")
 const requestIp=require("request-ip")
+
 const {getAccessToken,getRefreshToken,middelware,VerifyAuthantication, VerifyToken,genhashpassword, getAccessToken2, VerifyToken2,comparePassword2, getRefreshToken2}=require("./AuthService.js")
   
-
-
+ 
+ 
 
 const crypto=require("crypto")
 const app=express()
+
+const RedisStore = require('connect-redis')(session); // No .default!
+const redis = require('redis');
+const redisClient = redis.createClient();
+
+redisClient.on('error', (err) => {
+		console.error('Redis error:', err);
+	});
+
 const {mailit,emailvemailsend,mailit22,mes22,mailit21,profilevemsend,forgetpasswordemail, forgetpasswordemailforadmin}=require("./mailtransfer")
 app.use(upload())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
-app.use(cors())
+app.use(cors(({
+	origin:"http://127.0.0.1:3000",
+	credentials:true
+})))
 
 app.use(session({
+	 store: new RedisStore({ client: redisClient }),
 	secret:process.env.session_secret,
 	resave:false,
 	 saveUninitialized: false,
-	cookie:{httpOnly:true,
+	cookie:{
+		httpOnly:true,
 secure:false
 }
 }))
@@ -208,7 +223,7 @@ await take.save()
 		res.status(200).json({message:"You are Admin Now",prof:decodedata.profile})
 		
 		}else{
-			res.status(404).json({message:"Invalid Link"})
+			res.status(400).json({message:"Invalid token"})
 			}
 	}
 
@@ -991,7 +1006,7 @@ const restoken=getRefreshToken(sessionid)
  
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
@@ -999,7 +1014,7 @@ res.cookie("Access_Token",actoken, {
 
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     sameSite: 'Strict',
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days

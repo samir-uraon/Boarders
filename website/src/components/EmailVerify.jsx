@@ -34,6 +34,11 @@ setloading(false)
 		setvalidurl(false)
 		setloading(false)
 	}
+	else if(res.status==400){
+			setvalidurl(false)
+		setloading(false)
+				seterror(true)
+	}
 else{
 	seterror(true)
 	setvalidurl(false)
@@ -52,7 +57,7 @@ useEffect(()=>{
  
 	fetchapi()
 
-},[params])
+},[])
 
 if(loading){
 	return (
