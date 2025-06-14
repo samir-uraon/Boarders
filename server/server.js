@@ -1133,7 +1133,7 @@ app.get("/Logout",async (req,res)=>{
 	//console.log("ok then");
 	
 	if(req.user){
-		let test1=await mongoModel2.deleteOne({SessionId:req.user.SessionId})
+		let test1=await mongoModel2.deleteOne({SessionId:req.user.userSessionId})
 		if(test1){
 					
 					req.session.destroy()
