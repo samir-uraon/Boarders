@@ -354,7 +354,7 @@ res.cookie("Access_Token2",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
 				   path: '/',
-												domain: "https://hostelboarders.vercel.app",
+										 
 								partitioned:	true,
     maxAge: 5 * 60 * 1000 // 5 Minutes
   })  
@@ -364,7 +364,7 @@ res.cookie("Access_Token2",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
-									domain: "https://hostelboarders.vercel.app",
+							 
 				partitioned:	true,
     maxAge:  60 * 60 * 1000 // 1 hours
   });
@@ -499,6 +499,8 @@ app.post("/footers/addlinks",async(req,res)=>{
 
 app.use(VerifyAuthantication)
 app.get("/",async(req,res)=>{
+	console.log("ok");
+	
 try{
 let test=await mongodb_model.find({profileverification:true,emailverification:true}).select({lastupdate:false,	profileverification:	false,
 	emailverification:false,time:false,	coords:false,password:false,__v:false,_id:false,adminPower:false})
@@ -566,7 +568,7 @@ res.cookie("Access_Token",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
 					partitioned:	true,
-										domain: "https://hostelboarders.vercel.app",
+								 
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
@@ -576,7 +578,7 @@ res.cookie("Access_Token",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
-									domain: "https://hostelboarders.vercel.app",
+							 
 					partitioned:	true,
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
@@ -702,7 +704,7 @@ app.post("/forgetpassword",async (req,res)=>{
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
-									domain: "https://hostelboarders.vercel.app",
+							 
 					partitioned:	true,
     maxAge: 60 * 60 * 1000 // 60 Minutes
 		})
@@ -1011,18 +1013,18 @@ const restoken=getRefreshToken(sessionid)
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    	partitioned:	true,
+   
     path: '/',
-									domain: "https://hostelboarders.vercel.app",
+    sameSite: "none",
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
 
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    	partitioned:	true,
+   sameSite: "none",
     path: '/',
-									domain: "https://hostelboarders.vercel.app",
+							 sameSite: "none",
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
 
