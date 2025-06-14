@@ -1024,7 +1024,7 @@ res.cookie("Access_Token",actoken, {
     secure: true, // Set to true in production (HTTPS)
    sameSite: "none",
     path: '/',
-							 sameSite: "none",
+						 
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
 
@@ -1139,6 +1139,7 @@ app.get("/Logout",async (req,res)=>{
 					req.session.destroy()
 			res.clearCookie("Access_Token")
 			res.clearCookie("Refresh_Token")
+			req.user=null
 		res.status(200).json({goto:"/"})
 		}
 	}else{
