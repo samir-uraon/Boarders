@@ -36,8 +36,8 @@ localStorage.clear()
 		sessionStorage.clear()
 
 if(data.goto){
+	setisOk(false)
 navigate(`${data.goto}`)
-setisOk(false)
 }else{
 navigate("/Login")
 }
