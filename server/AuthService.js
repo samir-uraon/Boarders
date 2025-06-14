@@ -185,14 +185,14 @@ req.user=userInfo
 res.cookie("Access_Token",newAccessToken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    sameSite:"lax" ,
+    sameSite:"none" ,
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
 res.cookie("Refresh_Token",newRefreshToken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    sameSite:"lax" ,
+    sameSite:"none" ,
     path: '/',
     maxAge: 7*24*60* 60 * 1000 // 7 day
   })
@@ -361,14 +361,14 @@ req.user2=userInfo
 res.cookie("Access_Token2",newAccessToken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    sameSite:"lax" ,
+    sameSite:"none" ,
     path: '/',
     maxAge: 5 * 60 * 1000 // 5 Minutes
   })
 res.cookie("Refresh_Token2",newRefreshToken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    sameSite:"lax" ,
+    sameSite:"none" ,
     path: '/',
     maxAge:60* 60 * 1000 // 1 hours
   })
