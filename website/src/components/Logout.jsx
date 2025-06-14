@@ -47,7 +47,7 @@ setTimeout(()=>{
 dispatch({type:"fetch_end"})
 navigate(data.goto)
 
-},2000)
+},3000)
 
 }else{
 navigate("/Login")
