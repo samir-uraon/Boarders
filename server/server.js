@@ -354,6 +354,7 @@ res.cookie("Access_Token2",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
 				   path: '/',
+								partitioned:	true,
     maxAge: 5 * 60 * 1000 // 5 Minutes
   })  
 
@@ -362,6 +363,7 @@ res.cookie("Access_Token2",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
+				partitioned:	true,
     maxAge:  60 * 60 * 1000 // 1 hours
   });
 
@@ -561,6 +563,7 @@ res.cookie("Access_Token",actoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
+					partitioned:	true,
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
@@ -570,6 +573,7 @@ res.cookie("Access_Token",actoken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
+					partitioned:	true,
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
 
@@ -694,6 +698,7 @@ app.post("/forgetpassword",async (req,res)=>{
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
+					partitioned:	true,
     maxAge: 60 * 60 * 1000 // 60 Minutes
 		})
 
@@ -1001,7 +1006,7 @@ const restoken=getRefreshToken(sessionid)
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    
+    	partitioned:	true,
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
@@ -1009,7 +1014,7 @@ res.cookie("Access_Token",actoken, {
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
     secure: true, // Set to true in production (HTTPS)
-    
+    	partitioned:	true,
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
   });
