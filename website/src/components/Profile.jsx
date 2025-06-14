@@ -131,18 +131,18 @@ Last  Update
 <div className='pt'>
 <section>
 	                <ul className="social-icons">
-                 <li><a onClick={()=>{
-																						prof.facebooklink=="#"?toast.info('Link Not Add',{className:"test"}):window.open(prof.facebooklink)}}
-																						 target='_blank'><i className="fab fa-facebook"></i></a></li>
-                 <li><a onClick={()=>{
-																						prof.facebooklink=="#"?toast.info('Link Not Add',{className:"test"}):window.open(prof.instralink)}}
-																						 target='_blank'><i className="fab fa-instagram"></i></a></li>
-                 <li><a  onClick={()=>{
-																						prof.facebooklink=="#"?toast.info('Link Not Add',{className:"test"}):window.open(prof.linkedinlink)}}
-																						 target='_blank'><i className="fab fa-linkedin"></i></a></li>
-                 <li><a  onClick={()=>{
-																						prof.facebooklink=="#"?toast.info('Link Not Add',{className:"test"}):window.open(`https://wa.me/${prof.whatsapplink}`)}}
-																						 target='_blank'><i className="fa-brands fa-whatsapp"></i></a></li>
+                  <li onClick={()=>{
+                (!prof.facebooklink ||  prof.facebooklink.charAt(prof.facebooklink.length-1)=="#")?toast.info('Link Not Provided',{className:"test"}):window.open(prof.facebooklink)
+                 }}> <i className="fab fa-facebook"></i></li>
+                 <li onClick={()=>{
+                (!prof.youtubelink || prof.youtubelink.charAt(prof.youtubelink.length-1)=="#")?toast.info('Link Not Provided',{className:"test"}):window.open(prof.youtubelink)
+                 }}><i className="fa-brands fa-youtube"></i></li>
+                 <li onClick={()=>{
+                    (!prof.instralink || prof.instralink.charAt(prof.instralink.length-1)=="#")?toast.info('Link Not Provided',{className:"test"}):window.open(isdata.instralink)
+                 }}><i className="fab fa-instagram"></i></li>
+                 <li onClick={()=>{
+                    ( !prof.linkedinlink || prof.linkedinlink.charAt(prof.linkedinlink.length-1)=="#")?toast.info('Link Not Provided',{className:"test"}):window.open(prof.linkedinlink)
+                 }}><i className="fab fa-linkedin"></i></li>
                 </ul>
 </section>
 <NavLink to="/Add_Links" id="paddbutton"><section>Add Links</section></NavLink>
