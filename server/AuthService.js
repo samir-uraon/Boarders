@@ -187,6 +187,7 @@ res.cookie("Access_Token",newAccessToken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
 					partitioned:	true,
+					domain: "https://hostelboarders.vercel.app",
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
   })
@@ -195,6 +196,7 @@ res.cookie("Refresh_Token",newRefreshToken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
+									domain: "https://hostelboarders.vercel.app",
 					partitioned:	true,
     maxAge: 7*24*60* 60 * 1000 // 7 day
   })
@@ -365,6 +367,7 @@ res.cookie("Access_Token2",newAccessToken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
+									domain: "https://hostelboarders.vercel.app",
 					partitioned:	true,
     maxAge: 5 * 60 * 1000 // 5 Minutes
   })
@@ -373,6 +376,7 @@ res.cookie("Refresh_Token2",newRefreshToken, {
     secure: true, // Set to true in production (HTTPS)
     sameSite:"none" ,
     path: '/',
+									domain: "https://hostelboarders.vercel.app",
 					partitioned:	true,
     maxAge:60* 60 * 1000 // 1 hours
   })
