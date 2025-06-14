@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import Emailvs from './Emailvs'
 import ReEmailvl from './ReEmailvl'
 import Error from './Error'
-import "./Emailverify.css"
+import "./EmailVerify.css"
 import { toast } from 'react-toastify'
 
 const EmailVerify = () => {
