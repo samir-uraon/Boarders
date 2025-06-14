@@ -37,7 +37,7 @@ localStorage.clear()
 
 if(data.goto){
 navigate(`${data.goto}`)
-
+setisOk(false)
 }else{
 navigate("/Login")
 }
