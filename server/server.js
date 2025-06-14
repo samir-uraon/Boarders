@@ -25,7 +25,7 @@ app.use(upload())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors(({
-	origin:"http://127.0.0.1:3000",
+	origin:"https://hostelboarders.vercel.app",
 	credentials:true
 })))
 
@@ -36,7 +36,7 @@ app.use(session({
 	 saveUninitialized: false,
 	cookie:{
 		httpOnly:true,
-secure:false
+secure:true
 }
 }))
  
@@ -351,7 +351,7 @@ const restoken=getRefreshToken2(sessionid)
  
 res.cookie("Access_Token2",actoken, { 
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     
     path: '/',
     maxAge: 5 * 60 * 1000 // 5 Minutes
@@ -359,7 +359,7 @@ res.cookie("Access_Token2",actoken, {
 
  res.cookie('Refresh_Token2', restoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     
     path: '/',
     maxAge:  60 * 60 * 1000 // 1 hours
@@ -559,7 +559,7 @@ const restoken=getRefreshToken(sessionid)
  
 res.cookie("Access_Token",actoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     
     path: '/',
     maxAge: 15 * 60 * 1000 // 15 Minutes
@@ -567,7 +567,7 @@ res.cookie("Access_Token",actoken, {
 
  res.cookie('Refresh_Token', restoken, {
     httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     
     path: '/',
     maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
@@ -691,7 +691,7 @@ app.post("/forgetpassword",async (req,res)=>{
 
 		res.cookie("Reset_token",token,{
 			 httpOnly: true,
-    secure: false, // Set to true in production (HTTPS)
+    secure: true, // Set to true in production (HTTPS)
     
     path: '/',
     maxAge: 60 * 60 * 1000 // 60 Minutes
