@@ -11,6 +11,9 @@
 	font-style: normal;
 padding: 5rem;
 }
+.fcard{
+	height:70%;
+}
 .card{
 	overflow: hidden;
 	width: 30rem;
@@ -28,7 +31,7 @@ font-size: 125%;
 .main2{
 		width: 35rem;
 	height: 22rem;
-
+ 
 }
 .main3{
 		width: auto;

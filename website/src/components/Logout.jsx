@@ -10,13 +10,16 @@ const Logout = () => {
 let initialValue={
 	loading:true
 }
+
 const reducer=(state,action)=>{
  switch (action.type) {
 		case "fetch_start":
 			return{...initialValue}
 			break;
 				case "fetch_end":
-			return {loading:false}
+			return {
+				loading:false
+			}
 			break;
 	
 		default:
@@ -36,12 +39,21 @@ localStorage.clear()
 		sessionStorage.clear()
 
 if(data.goto){
-	setisOk(false)
-navigate(`${data.goto}`)
+
+setisOk(false)
+
+setTimeout(()=>{
+
+dispatch({type:"fetch_end"})
+navigate(data.goto)
+
+},2000)
+
 }else{
 navigate("/Login")
-}
 dispatch({type:"fetch_end"})
+}
+
 }
 
 

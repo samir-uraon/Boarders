@@ -80,7 +80,7 @@ console.log(resd);
 				<div className="goback">
 								<button onClick={()=>{navigate(-1)}}><i className="fa-solid fa-arrow-left"></i> Go Back</button>
 								</div>
-<div className="containers">
+<div className="containers fcard">
 	<div className="card main2">
 	<div className="main">
 

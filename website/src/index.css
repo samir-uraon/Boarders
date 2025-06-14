@@ -24,7 +24,6 @@ font-size: 62.5%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
 }
 .hide{
   display: none;
@@ -76,6 +75,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
 }
 button:hover {
   border-color: #646cff;
@@ -208,12 +208,12 @@ button:focus-visible {
 }
 @media (max-width:474px){
       :root {
-    font-size: 51%;
+    font-size: 54%;
   }
 }
 @media  (max-width:444px) {
     :root {
-    font-size: 50%;
+    font-size: 52%;
   }
   .main2 .main h2{
     font-size: 2.8rem;
@@ -226,13 +226,13 @@ button:focus-visible {
 }
 @media (max-width:415px){
       :root {
-    font-size: 48%;
+    font-size: 50%;
   }
 }
 
 @media  (max-width:395px) {
         :root {
-    font-size: 46%;
+    font-size: 50%;
   }
 .main2 .main h2{
 		font-size: 2.5rem;
@@ -246,9 +246,19 @@ button:focus-visible {
     }
 }
 @media (max-width: 380px) {
-  :root {
-    font-size: 43%;
-  }
+
+.search_data {
+
+  width: 80%;
+ & .details{
+ 
+   & p{
+  font-size: 1.4rem;
+   }
+   & span{
+    font-size: 1.4rem;
+   }
+}}
   .center-div{
   height: 100%;
 }
@@ -287,29 +297,27 @@ button:focus-visible {
 }
 @media (max-width: 350px) {
 
-  :root {
-      font-size: 40%;
-    }
+ 
 
   }
     @media (max-width: 330px) {
 
     :root {
-        font-size: 38%;
+        font-size: 40%;
       }
 
     }
   @media (max-width: 330px) {
 
     :root {
-        font-size: 36%;
+        font-size: 39%;
       }
 
     }
       @media (max-width: 310px) {
 
     :root {
-        font-size: 35%;
+        font-size: 40%;
       }
 
     }
