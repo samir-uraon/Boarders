@@ -107,7 +107,7 @@ else{
 		let resd=await res.json()
   
 		
-		console.log(resd);
+		//console.log(resd);
 		console.log(res.cookies);
 		
 
