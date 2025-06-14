@@ -1,6 +1,6 @@
 import React from 'react'
 	
-import "../components/CardMain.css"
+import "../components/Cardmain.css"
 import {  toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 
