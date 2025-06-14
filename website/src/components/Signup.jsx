@@ -107,7 +107,8 @@ if(!resed.Emailexist){
 let res2=	await fetch(import.meta.env.VITE_cloud_api,{method:"post",body:data2})
 	let res21=await res2.json()
 	//console.log(res21.url);
-data.set("Profile",res21.url)
+	let prurl=(res21.url).replace("t:/","s:")
+data.set("Profile",prurl)
 data.append("coords",coordinates)
 //console.log(data);
 
